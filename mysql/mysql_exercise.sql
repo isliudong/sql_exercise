@@ -1,83 +1,51 @@
 -- Create table 学生信息
 create table HAND_STUDENT
 (
-  STUDENT_NO     VARCHAR2(10) not null,
-  STUDENT_NAME   VARCHAR2(20),
-  STUDENT_AGE    NUMBER(2),
-  STUDENT_GENDER VARCHAR2(5)
+  STUDENT_NO     VARCHAR(10) not null,
+  STUDENT_NAME   VARCHAR(20),
+  STUDENT_AGE    int(2),
+  STUDENT_GENDER VARCHAR(5)
 );
+COMMIT;
 -- Add comments to the table 
-comment on table HAND_STUDENT
-  is '学生信息表';
--- Add comments to the columns 
-comment on column HAND_STUDENT.STUDENT_NO
-  is '学号';
-comment on column HAND_STUDENT.STUDENT_NAME
-  is '姓名';
-comment on column HAND_STUDENT.STUDENT_AGE
-  is '年龄';
-comment on column HAND_STUDENT.STUDENT_GENDER
-  is '性别';
--- Create/Recreate primary, unique and foreign key constraints 
-alter table HAND_STUDENT add primary key (STUDENT_NO);
-
+ALTER TABLE HAND_STUDENT COMMENT '学生信息表' ;
+-- Add comments to the columns
+ALTER TABLE HAND_STUDENT MODIFY COLUMN STUDENT_NO VARCHAR ( 10 ) COMMENT '学号';
+ALTER TABLE HAND_STUDENT MODIFY COLUMN STUDENT_Name VARCHAR ( 20 ) COMMENT '姓名';
+ALTER TABLE HAND_STUDENT MODIFY COLUMN STUDENT_age INT ( 2 ) COMMENT '年龄';
+ALTER TABLE HAND_STUDENT MODIFY COLUMN student_GENDER VARCHAR ( 5 ) COMMENT '性别';
+-- Create/Recreate primary, unique and foreign key constraints
+ALTER TABLE HAND_STUDENT ADD PRIMARY KEY ( STUDENT_NO );
 -- Create table 教师信息表
 create table HAND_TEACHER
 (
-  TEACHER_NO   VARCHAR2(10) not null,
-  TEACHER_NAME VARCHAR2(20),
-  MANAGER_NO   VARCHAR2(10)
+  TEACHER_NO   VARCHAR(10) not null,
+  TEACHER_NAME VARCHAR(20),
+  MANAGER_NO   VARCHAR(10)
 );
--- Add comments to the table 
-comment on table HAND_TEACHER
-  is '教师信息表';
--- Add comments to the columns 
-comment on column HAND_TEACHER.TEACHER_NO
-  is '教师编号';
-comment on column HAND_TEACHER.TEACHER_NAME
-  is '教师名称';
-comment on column HAND_TEACHER.MANAGER_NO
-  is '上级编号';
+
 -- Create/Recreate primary, unique and foreign key constraints 
 alter table HAND_TEACHER add primary key (TEACHER_NO);
 
 -- Create table 课程信息表
 create table HAND_COURSE
 (
-  COURSE_NO   VARCHAR2(10) not null,
-  COURSE_NAME VARCHAR2(20),
-  TEACHER_NO  VARCHAR2(20) not null
+  COURSE_NO   VARCHAR(10) not null,
+  COURSE_NAME VARCHAR(20),
+  TEACHER_NO  VARCHAR(20) not null
 );
--- Add comments to the table 
-comment on table HAND_COURSE
-  is '课程信息表';
--- Add comments to the columns 
-comment on column HAND_COURSE.COURSE_NO
-  is '课程号';
-comment on column HAND_COURSE.COURSE_NAME
-  is '课程名称';
-comment on column HAND_COURSE.TEACHER_NO
-  is '教师编号';
+
 -- Create/Recreate primary, unique and foreign key constraints 
 alter table HAND_COURSE add constraint PK_COURSE primary key (COURSE_NO, TEACHER_NO);
 
 -- Create table 成绩信息表
 create table HAND_STUDENT_CORE
 (
-  STUDENT_NO VARCHAR2(10) not null,
-  COURSE_NO  VARCHAR2(10) not null,
-  CORE       NUMBER(4,2)
+  STUDENT_NO VARCHAR(10) not null,
+  COURSE_NO  VARCHAR(10) not null,
+  CORE       FLOAT4
 );
--- Add comments to the table 
-comment on table HAND_STUDENT_CORE
-  is '学生成绩表';
--- Add comments to the columns 
-comment on column HAND_STUDENT_CORE.STUDENT_NO
-  is '学号';
-comment on column HAND_STUDENT_CORE.COURSE_NO
-  is '课程号';
-comment on column HAND_STUDENT_CORE.CORE
-  is '分数';
+
 -- Create/Recreate primary, unique and foreign key constraints 
 alter table HAND_STUDENT_CORE add constraint PK_SC primary key (STUDENT_NO, COURSE_NO);
 
