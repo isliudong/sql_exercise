@@ -17,3 +17,13 @@ _
 /java8_exercise/src/demo/liudong/unit1/Test.java,4\5\450581ff607cdf70c571530cf83ffd8dc2d05582
 _
 /java8_exercise/src/demo/liudong/unit3/Test.java,8\4\84b4d4ff0cec3550484bc87f9a38f8f9eaf16945
+e
+5java8_exercise/src/demo/liudong/enums/UserStatus.java,8\d\8da13541807558344a1f34ba758139cd6a7ee404
+d
+4java8_exercise/src/demo/liudong/unit3/Question1.java,5\f\5fbeabb9a5a1c7af082dac5ec87b9e4b8008ced0
+_
+/java8_exercise/src/demo/liudong/model/User.java,a\c\ac6f0510f715654ea215e7918a64b7445e453f15
+d
+4java8_exercise/src/demo/liudong/unit3/Question2.java,b\7\b7726a738ec7cf882276db12eb958eef75758b6a
+e
+5java8_exercise/src/demo/liudong/unit3/StreamTest.java,d\5\d57a34db0c959fe99fac842871bfc0d1f93eb339
