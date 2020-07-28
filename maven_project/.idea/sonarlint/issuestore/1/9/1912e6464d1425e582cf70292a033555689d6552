@@ -1,0 +1,15 @@
+
+~
+java:S1488"\Immediately return this expression instead of assigning it to the temporary variable "user".(¨í÷õÿÿÿÿÿ8ƒ¨‹¡¹.
+^
+java:S1854"<Remove this useless assignment to local variable "student2".(¡µ±ûÿÿÿÿ8µÉŸ ¹.
+X
+java:S1854";Remove this useless assignment to local variable "student".(åÓçÉ8ƒ¨‹¡¹.
+O
+java:S1481"-Remove this unused "student2" local variable.(¡µ±ûÿÿÿÿ8µÉŸ ¹.
+^
+java:S1854"<Remove this useless assignment to local variable "student3".(ÄÄèøÿÿÿÿ8µÉŸ ¹.
+O
+java:S1481"-Remove this unused "student3" local variable.(ÄÄèøÿÿÿÿ8µÉŸ ¹.
+I
+java:S1481",Remove this unused "student" local variable.(åÓçÉ8ƒ¨‹¡¹.
