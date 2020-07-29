@@ -6,10 +6,12 @@ import com.demo.service.StudentServiceImpl;
 import com.demo.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Random;
 
@@ -50,6 +52,19 @@ public class TestController {
         return user;
     }
 
+    @RequestMapping("/addValidUser")
+    @ResponseBody
+    public User addUser(@Valid User user, BindingResult result){
+        if(!result.hasErrors()) {
+            userService.insert(user);
+        }else {
+
+            user.setName("被你玩坏了");
+
+        }
+        return user;
+    }
+
     @RequestMapping("/updateUser")
     @ResponseBody
     public User updateUser(){
@@ -82,6 +97,12 @@ public class TestController {
         List<User> users = userService.getAll(pageNum, size);
 
         return users;
+    }
+
+    @RequestMapping("/test")
+    public String test(){
+
+        return "test";
     }
 
 

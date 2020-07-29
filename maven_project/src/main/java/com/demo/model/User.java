@@ -1,11 +1,21 @@
 package com.demo.model;
 
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
+
 /**
  * @author liudong
  */
 public class User {
+
+    @Null
     Integer id;
+    @NotNull
+    @Length(min = 1, max = 8)
     String name;
+    @Length(max = 1)
     String sex;
 
     public Integer getId() {

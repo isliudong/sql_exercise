@@ -1,13 +1,13 @@
 
-L
-java:S1611$"/Remove the parentheses around the "e" parameter(êÃÙÖ8Ø¿Ö‚¹.
-Y
-java:S1128	"7Remove this unused import 'java.util.stream.IntStream'.(ÙÉ½Ÿùÿÿÿÿ8¹Ó˜¹.
 M
 java:S14817"+Remove this unused "stream" local variable.(¿åÏ³ûÿÿÿÿ8‡ÊÓ˜¹.
-„
-java:S1192"gDefine a constant instead of duplicating this literal "--------------------------------------" 3 times.(êç‹±8®œØ‚¹.
+L
+java:S1611$"/Remove the parentheses around the "e" parameter(êÃÙÖ8Ø¿Ö‚¹.
 \
 java:S18547":Remove this useless assignment to local variable "stream".(¿åÏ³ûÿÿÿÿ8‡ÊÓ˜¹.
 Q
 java:S1611"/Remove the parentheses around the "e" parameter(¼»éÿÿÿÿÿÿ8Üİ‚¹.
+Y
+java:S1128	"7Remove this unused import 'java.util.stream.IntStream'.(ÙÉ½Ÿùÿÿÿÿ8¹Ó˜¹.
+„
+java:S1192"gDefine a constant instead of duplicating this literal "--------------------------------------" 3 times.(êç‹±8®œØ‚¹.
