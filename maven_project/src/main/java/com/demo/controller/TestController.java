@@ -7,8 +7,10 @@ import com.demo.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -71,6 +73,15 @@ public class TestController {
         userService.delete(5);
 
         return user;
+    }
+
+    //分页查询
+    @RequestMapping("/getAll")
+    @ResponseBody
+    public List<User> getAll(@RequestParam int pageNum,@RequestParam int size){
+        List<User> users = userService.getAll(pageNum, size);
+
+        return users;
     }
 
 

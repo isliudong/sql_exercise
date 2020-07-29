@@ -3,11 +3,13 @@ package com.demo.service;
 import com.demo.mapper.UserMapper;
 import com.demo.event.UserEvent;
 import com.demo.model.User;
+import com.github.pagehelper.PageHelper;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author liudong
@@ -29,6 +31,12 @@ public class UserServiceImpl implements UserService, ApplicationEventPublisherAw
         return user;
     }
 
+    @Override
+    public List<User> getAll(int pageNum, int size) {
+        PageHelper.startPage(pageNum,size);
+        List<User> users = userMapper.getAll();
+        return users;
+    }
     @Override
     public void insert(User user) {
         userMapper.insert(user);

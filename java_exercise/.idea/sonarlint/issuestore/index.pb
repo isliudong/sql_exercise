@@ -27,3 +27,5 @@ d
 4java8_exercise/src/demo/liudong/unit3/Question2.java,b\7\b7726a738ec7cf882276db12eb958eef75758b6a
 e
 5java8_exercise/src/demo/liudong/unit3/StreamTest.java,d\5\d57a34db0c959fe99fac842871bfc0d1f93eb339
+\
+,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
