@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 设置为IUserDao接口方法提供sql语句配置 -->
-<mapper namespace="com.demo.dao.StudentDao">
+<mapper namespace="com.demo.mapper.StudentMapper">
 
-    <select id="get" resultType="Student" parameterType="String">
+    <select id="get" resultType="com.demo.model.Student" parameterType="String">
         SELECT * FROM hand_student WHERE student_no = #{id}
     </select>
 
-    <select id="get2" resultType="Student" >
+    <select id="get2" resultType="com.demo.model.Student" >
         SELECT * FROM hand_student where STUDENT_Name='张三'
     </select>
 

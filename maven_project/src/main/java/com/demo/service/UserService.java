@@ -8,5 +8,8 @@ import com.demo.model.User;
  */
 public interface UserService {
     User get(Integer id);
+    void insert(User user);
+    void update(User user);
+    void delete(Integer id);
 
 }

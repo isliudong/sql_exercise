@@ -1,11 +1,11 @@
-package com.demo.dao;
+package com.demo.mapper;
 
 import com.demo.model.Student;
 
 /**
  * @author liudong
  */
-public interface StudentDao {
+public interface StudentMapper {
 
     Student get(String id);
 

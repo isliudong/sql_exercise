@@ -1,9 +1,7 @@
 package com.demo.service;
 
-import com.demo.dao.StudentDao;
-import com.demo.dao.UserDao;
+import com.demo.mapper.UserMapper;
 import com.demo.event.UserEvent;
-import com.demo.model.Student;
 import com.demo.model.User;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
@@ -19,11 +17,11 @@ public class UserServiceImpl implements UserService, ApplicationEventPublisherAw
     private ApplicationEventPublisher applicationEventPublisher;
 
     @Resource
-    private UserDao userDao;
+    private UserMapper userMapper;
 
     @Override
     public User get(Integer id) {
-        User user = userDao.get(id);
+        User user = userMapper.get(id);
         System.out.println("-------------");
         //发布事件
         applicationEventPublisher.publishEvent(new UserEvent(this,user));
@@ -31,7 +29,20 @@ public class UserServiceImpl implements UserService, ApplicationEventPublisherAw
         return user;
     }
 
+    @Override
+    public void insert(User user) {
+        userMapper.insert(user);
+    }
 
+    @Override
+    public void update(User user) {
+        userMapper.update(user);
+    }
+
+    @Override
+    public void delete(Integer id) {
+        userMapper.delete(id);
+    }
 
 
     @Override

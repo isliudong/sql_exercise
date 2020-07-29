@@ -1,5 +1,8 @@
 package com.demo.model;
 
+/**
+ * @author liudong
+ */
 public class User {
     Integer id;
     String name;
