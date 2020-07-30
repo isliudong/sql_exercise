@@ -18,6 +18,9 @@
 
     <!-- 静态资源默认servlet配置 -->
     <mvc:default-servlet-handler/>
+    <!--<mvc:interceptors>
+        <bean class="com.demo.controller.TestController"/>
+    </mvc:interceptors>-->
 
     <!-- 配置返回视图的路径，以及识别后缀是jsp文件 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -25,10 +28,10 @@
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-
+    <!-- 配置返回视图的路径，以及识别后缀是html文件 -->
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
         <property name="templateLoaderPath">
-            <value>/WEB-INF/view/html</value>
+            <value>/WEB-INF/view/</value>
         </property>
     </bean>
     <bean id="htmlviewResolver"

@@ -1,6 +1,5 @@
 package com.demo.controller;
 
-import com.demo.model.Student;
 import com.demo.model.User;
 import com.demo.service.StudentServiceImpl;
 import com.demo.service.UserServiceImpl;
@@ -93,7 +92,7 @@ public class TestController {
     //分页查询
     @RequestMapping("/getAll")
     @ResponseBody
-    public List<User> getAll(@RequestParam int pageNum,@RequestParam int size){
+    public List<User> getAll(@RequestParam(defaultValue = "1",required = false) int pageNum, @RequestParam(defaultValue = "3",required = false) int size){
         List<User> users = userService.getAll(pageNum, size);
 
         return users;
@@ -102,6 +101,7 @@ public class TestController {
     @RequestMapping("/test")
     public String test(){
 
+        System.out.println("方法响应");
         return "test";
     }
 
