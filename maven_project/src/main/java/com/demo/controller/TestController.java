@@ -101,7 +101,7 @@ public class TestController {
     @RequestMapping("/test")
     public String test(){
 
-        System.out.println("方法响应");
+        System.out.println("方法响应-------------------");
         return "test";
     }
 
