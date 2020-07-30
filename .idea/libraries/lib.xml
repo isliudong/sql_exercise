@@ -41,6 +41,8 @@
       <root url="jar://$PROJECT_DIR$/maven_project/target/maven_project/WEB-INF/lib/pagehelper-5.2.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/spring-webmvc-4.0.2.RELEASE-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
