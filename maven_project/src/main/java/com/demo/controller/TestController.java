@@ -8,6 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -104,6 +105,17 @@ public class TestController {
         System.out.println(byGenerator);
         System.out.println("方法响应-------------------");
         return "test";
+    }
+
+    @RequestMapping("/test2")
+    public ModelAndView test2(){
+
+        User byGenerator = userService.getByGenerator(1);
+        System.out.println(byGenerator);
+        System.out.println("方法响应-------------------");
+        ModelAndView view = new ModelAndView("test");
+        view.addObject("msg","123456789");
+        return view;
     }
 
 

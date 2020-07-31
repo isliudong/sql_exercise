@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>添加员工</title>
 </head>
 <body>
+<h1 th:text="${msg}"></h1>
+<span th:text="${msg}"></span>
 <form action="/addValidUser" method="post">
+
 
     <input type="text" placeholder="用户名" name="name" required/>
     <input type="text" placeholder="性别" name="sex" required/>
