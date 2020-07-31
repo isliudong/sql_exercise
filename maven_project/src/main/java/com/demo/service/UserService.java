@@ -9,6 +9,7 @@ import java.util.List;
  */
 public interface UserService {
     User get(Integer id);
+    User getByGenerator(Integer id);
     void insert(User user);
     void update(User user);
     void delete(Integer id);

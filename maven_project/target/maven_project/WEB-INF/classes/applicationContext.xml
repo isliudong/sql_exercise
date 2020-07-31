@@ -43,11 +43,11 @@
         </property>
     </bean>
 
-    <!-- Mapper动态代理开发，扫描dao接口包-->
+    <!-- Mapper动态代理开发，扫描mapper接口包-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 注入sqlSessionFactory -->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <!-- 给出需要扫描Dao接口包 -->
+        <!-- 给出需要扫描mapper接口包 -->
         <property name="basePackage" value="com.demo.mapper"/>
     </bean>
 

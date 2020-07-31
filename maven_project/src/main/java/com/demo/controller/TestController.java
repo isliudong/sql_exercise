@@ -1,7 +1,6 @@
 package com.demo.controller;
 
 import com.demo.model.User;
-import com.demo.service.StudentServiceImpl;
 import com.demo.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,9 +18,6 @@ import java.util.Random;
  */
 @Controller
 public class TestController {
-    @Autowired
-    private StudentServiceImpl studentService;
-
     @Autowired
     private UserServiceImpl userService;
 
@@ -104,6 +100,8 @@ public class TestController {
         //异常测试
         //System.out.println(1/0);
 
+        User byGenerator = userService.getByGenerator(1);
+        System.out.println(byGenerator);
         System.out.println("方法响应-------------------");
         return "test";
     }

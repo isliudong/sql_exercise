@@ -5,3 +5,6 @@ transactionManager+transactionDefinition
 
 + 声明式事务（配置->注解）:
 基于AOP的拦截思想，本质是对方法进行拦截，业务代码干净
+
+
+maven启动mybatis generator 指令：mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
